@@ -1,4 +1,6 @@
-const search_word = "脳を鍛えるには運動しかない"
+// let element = document.getElementById('input')
+const search_word = "スマホ脳"//あとでelement.valueに変える
+// const search_word = "脳を鍛えるには運動しかない"
 // 検索キーワードを含んだGoogle Books APIキーを設定
 const google_api_key = "https://www.googleapis.com/books/v1/volumes?q=" + search_word + "&printType=books&maxResults=10"
 fetch(google_api_key)
@@ -18,6 +20,7 @@ fetch(google_api_key)
       .then(response => response.text())
       .then(data => {
         console.log(data);
+        document.getElementById('output_area0').innerHTML = search_word + data;
       })
       .catch(error => {
         console.log('エラーが発生しました', error);
@@ -27,6 +30,7 @@ fetch(google_api_key)
       .then(response => response.text())
       .then(data => {
         console.log(data);
+        document.getElementById('output_area1').innerHTML = search_word + data;
       })
       .catch(error => {
         console.log('エラーが発生しました', error);
@@ -36,6 +40,7 @@ fetch(google_api_key)
       .then(response => response.text())
       .then(data => {
         console.log(data);
+        document.getElementById('output_area2').innerHTML = search_word + data;
       })
       .catch(error => {
         console.log('エラーが発生しました', error);
