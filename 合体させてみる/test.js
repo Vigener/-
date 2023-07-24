@@ -7,6 +7,7 @@ fetch(google_api_key)
   .then(response => response.json())
   .then(data => {
     // Google Books APIの出力から上位3つのデータのISBN10を取得
+    console.log(data);
     const isbn10_data0 = data.items[0].volumeInfo.industryIdentifiers[0].identifier;//ここの0はisbnの10と16のうち前の10を選ぶためだからすべて0でいい
     const isbn10_data1 = data.items[1].volumeInfo.industryIdentifiers[0].identifier;
     const isbn10_data2 = data.items[2].volumeInfo.industryIdentifiers[0].identifier;
