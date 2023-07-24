@@ -4,42 +4,82 @@
   <meta charset="utf-8" />
   <link rel="stylesheet" href="favicon.ico">
   <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
   <script src="jquery-3.7.0.min.js"></script>
 </head>
 <body>
     <!-- <label for="site-search">検索キーワードを入力:</label> -->
     <input type="search" id="keyword" name="keyword" placeholder="検索キーワードを入力">
     <button id="begin_search">検索</button>
-    <!-- 一冊目の情報 -->
-    <div id="data0">
-      <h1></h1>
-      <div id="title_data0"></div>
-      <div id="author_area_data0"></div>
-      <div id="author_name_data0"></div>
-      <div id="image_area_data0"></div>
-      <div id="lending_status_data0_id_1"></div>
-      <div id="lending_status_data0_id_2"></div>
+    <!-- 出力結果 -->
+    <div id="output">
+      <!-- 一冊目の情報 -->
+      <div id="data0">
+        <div id="title_data0"></div>
+        <div id="author_area_data0"></div>
+        <div id="author_name_data0"></div>
+        <div id="image_area_data0"></div>
+        <p class="bold">蔵書状況</p>
+        <p>◯：貸出可、△：貸出中、✕：蔵書無</p>
+        <div id="lending_status_data0_id_1" class="scroll_table">
+          <table>
+            <tr>
+              <th rowspan="2">つくば市立図書館</th>
+              <th>中央館</th>
+              <th>谷田部</th>
+              <th>筑波</th>
+              <th>小野川</th>
+              <th>茎崎</th>
+              <th>自動車</th>
+            </tr>
+            <tr>
+              <td id="data0_chuoukan"></td>
+              <td id="data0_yatabe"></td>
+              <td id="data0_tsukuba"></td>
+              <td id="data0_onogawa"></td>
+              <td id="data0_kukizaki"></td>
+              <td id="data0_jidousha"></td>
+            </tr>
+          </table>        
+        </div>
+        <div id="lending_status_data0_id_2" class="scroll_table">
+          <table>
+            <tr>
+              <th rowspan="2">筑波大学附属図書館</th>
+              <th>中央</th>
+              <th>医学</th>
+              <th>図情</th>
+            </tr>
+            <tr>
+              <td id="data0_chuou"></td>
+              <td id="data0_igaku"></td>
+              <td id="data0_zujou"></td>
+            </tr>
+          </table>  
+        </div>
+      </div>
+      <!-- 二冊目の情報 -->
+      <div id="data1">
+        <h1></h1>
+        <div id="title_data1"></div>
+        <div id="author_area_data1"></div>
+        <div id="author_name_data1"></div>
+        <div id="image_area_data1"></div>
+        <div id="lending_status_data1_id_1"></div>
+        <div id="lending_status_data1_id_2"></div>
+      </div>
+      <!-- 三冊目の情報 -->
+      <div id="data2">
+        <h1></h1>
+        <div id="title_data2"></div>
+        <div id="author_area_data2"></div>
+        <div id="author_name_data2"></div>
+        <div id="image_area_data2"></div>
+        <div id="lending_status_data2_id_1"></div>
+        <div id="lending_status_data2_id_2"></div>
+      </div>    
     </div>
-    <!-- 二冊目の情報 -->
-    <div id="data1">
-      <h1></h1>
-      <div id="title_data1"></div>
-      <div id="author_area_data1"></div>
-      <div id="author_name_data1"></div>
-      <div id="image_area_data1"></div>
-      <div id="lending_status_data1_id_1"></div>
-      <div id="lending_status_data1_id_2"></div>
-    </div>
-    <!-- 三冊目の情報 -->
-    <div id="data2">
-      <h1></h1>
-      <div id="title_data2"></div>
-      <div id="author_area_data2"></div>
-      <div id="author_name_data2"></div>
-      <div id="image_area_data2"></div>
-      <div id="lending_status_data2_id_1"></div>
-      <div id="lending_status_data2_id_2"></div>
-    </div>    
   <script src="script.js"></script>
 </body>
 </html>
