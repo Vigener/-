@@ -50,7 +50,22 @@ function searchBooks() {
                 // console.log(lib_key_data0_str_id_1_n_1);
                 console.log(lib_key_data0_id_1);
                 console.log(lib_key_data0_str_id_1);
-                let data0_chuoukan = lib_key_data0_id_1["中央館"];
+                // 貸出状況によって◯△✕を代入
+                $(function lending_status(place) {
+                  check_place = place;
+                  if (lib_key_data0_id_1["中央館"] = "貸出可") {
+                    const data0_chuoukan = "◯";
+                    console.log(data0_chuoukan);
+                    $('#data0_chuoukan').html(data0_chuoukan);
+                  } else if (lib_key_data0_id_1["中央館"] = "貸出中") {
+                    const data0_chuoukan = "△";
+                    $('#data0_chuoukan').html(data0_chuoukan);
+                  } else {
+                    const data0_chuoukan = "✕";
+                    $('#data0_chuoukan').html(data0_chuoukan);
+                  }
+                });
+                // let data0_chuoukan = lib_key_data0_id_1["中央館"];
                 let data0_yatabe = lib_key_data0_id_1["谷田部"];
                 let data0_tsukuba = lib_key_data0_id_1["筑波"];
                 let data0_onogawa = lib_key_data0_id_1["小野川"];
@@ -68,7 +83,7 @@ function searchBooks() {
                 document.getElementById("image_area_data0").innerHTML = img_scr;
                 // 貸出状況をHTMLに表示
                 // document.getElementById("lending_status_data0_id_1").innerHTML = "<h3>蔵書状況</h3>つくば市立中央図書館<br>" + lib_key_data0_str_id_1;
-                $('#data0_chuoukan').html(data0_chuoukan);
+                // $('#data0_chuoukan').html(data0_chuoukan);
                 $('#data0_yatabe').html(data0_yatabe);
                 $('#data0_tsukuba').html(data0_tsukuba);
                 $('#data0_onogawa').html(data0_onogawa);
